@@ -29,7 +29,7 @@ for table in boletim caso obito_cartorio; do
 	upload_table_file $table
 	update_table $table
 done
-upload_table_file "caso-full"
+upload_table_file "caso_full"  # TODO: adicionar tabela ao `for`
 
 log "Generating file list page"
 python create_html.py dataset $DATASET $(date +"%Y-%m-%d") $SCRIPT_PATH/data/output/
